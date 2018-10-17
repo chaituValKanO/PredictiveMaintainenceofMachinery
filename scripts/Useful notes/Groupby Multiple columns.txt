@@ -1,0 +1,47 @@
+############ Multiple Groupby ######################
+
+
+complaintsLog = complaintsLog.sort_values(by='Comp_Log_DateTime',ascending=True)
+complaintsLog.head(5)
+
+
+#Grouping on repairs by machine and componentattended
+complaintsLog['Comp_Timelapse_same_errors'] = round(complaintsLog.groupby(['MachineID', 'Comp_Log_ErrorID'])['Comp_Log_DateTime'].diff().dt.total_seconds()/86400, 2)
+
+complaintsLog.Comp_Timelapse_same_errors = complaintsLog.Comp_Timelapse_same_errors.fillna(0)
+
+
+complaints_log_same_errors= round(complaintsLog.groupby(['MachineID', 'Comp_Log_ErrorID'], as_index=False)['Comp_Timelapse_same_errors'].mean(), 2)
+
+
+complaints_log_same_errors_pivot = pd.pivot_table(complaints_log_same_errors, index=["MachineID", "Comp_Log_ErrorID"], aggfunc='mean')
+
+
+complaints_log_same_errors_pivot = complaints_log_same_errors_pivot.unstack()
+
+
+complaints_log_same_errors_pivot = complaints_log_same_errors_pivot.fillna(0)
+
+
+#complaints_log_same_errors_pivot.to_csv('complaints_log_same_error.csv')
+
+
+complaints_log_same_errors_csv = pd.read_csv('C:\\Users\\chait\\Documents\\Insofe\\PhD\\scripts\\complaints_log_same_error.csv')
+complaints_log_same_errors_csv.head(5)
+
+
+complaints_log_final = pd.merge(complaints_log_same_errors_csv, complaints_log_diff_errors, on='MachineID', how='outer')
+complaints_log_final.head(5)
+
+
+
+########### Single groupby #######################
+complaintsLog['Comp_Timelapse_diff_errors'] = round(complaintsLog.groupby('MachineID')['Comp_Log_DateTime'].diff().dt.total_seconds()/86400, 2)
+
+complaintsLog.Comp_Timelapse_diff_errors = complaintsLog.Comp_Timelapse_diff_errors.fillna(0)
+
+complaintsLog['Comp_Timelapse_diff_errors'].unique()
+
+complaints_log_diff_errors= round(complaintsLog.groupby(['MachineID'], as_index=False)['Comp_Timelapse_diff_errors'].mean(), 2)
+
+

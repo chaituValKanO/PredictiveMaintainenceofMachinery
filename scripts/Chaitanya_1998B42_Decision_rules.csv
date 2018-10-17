@@ -1,0 +1,29 @@
+Component Replacement (class 1)														Component Repair (class 0)
+Leaf Node1:  If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair ? 16.905 and Comp_Timelapse_diff_repair ? 13.915 and Sensor4_min ? 20.465 and error1_avg ? 7.5 and Sensor1_min ? 108.09														Leaf Node1: If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair ? 16.905 and Comp_Timelapse_diff_repair ? 13.915 and Sensor4_min > 20.465
+														
+														
+Leaf Node2: If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair ? 16.905 and Comp_Timelapse_diff_repair > 13.915  and Sensor3_mean > 101.345 and Sensor2_min > 192.685 and Comp_Timelapse_diff_repair > 15.43														Leaf Node2: If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair ? 16.905 and Comp_Timelapse_diff_repair ? 13.915 and Sensor4_min >= 20.465 and error1_avg <= 7.5
+														
+														
+Leaf Node 3: If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair ? 16.905 and Comp_Timelapse_diff_repair > 13.915  and Sensor3_mean ? 101.345 and Sensor3_max ? 155.975 and Sensor3_min ? 59.745														LeafNode3: If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair ? 16.905 and Comp_Timelapse_diff_repair ? 13.915 and Sensor4_min >= 20.465 and error1_avg > 7.5 and Sensor1_min ? 108.09
+														
+														
+Leaf Node 4: If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair > 16.905 and Sensor2_mean ? 446.105 and comp4_repair_avg > 49.05 and ServicePeriod ? 18.5 and error1_avg ? 71.73														Leaf Node4: If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair ? 16.905 and Comp_Timelapse_diff_repair > 13.915  and Sensor3_mean > 101.345 and Sensor2_min <= 192.685 and Comp_Timelapse_diff_repair ? 15.43
+														
+														
+Leaf Node 5: If Comp_Timelapse_diff_errors > 21.385 and comp1_repair_avg ? 57.64 and comp4_repair_avg ? 55.395 and comp2_repair_avg ? 72.835 and comp3_repair_avg ? 61.785 and ServicePeriod  > 8.5														Leaf Node5: If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair ? 16.905 and Comp_Timelapse_diff_repair > 13.915  and Sensor3_mean > 101.345 and Sensor2_min > 192.685 
+														
+														
+														Leaf Node 6: If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair > 16.905 and Sensor2_mean ? 446.105 and comp4_repair_avg ? 49.05 and Sensor1_mean ? 170.315
+														
+														
+														Leaf Node 7: If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair > 16.905 and Sensor2_mean ? 446.105 and comp4_repair_avg > 49.05 and ServicePeriod ? 18.5 and error1_avg > 71.73
+														
+														
+														Leaf Node 8: If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair > 16.905 and Sensor2_mean ? 446.105 and comp4_repair_avg > 49.05 and ServicePeriod > 18.5 and ServicePeriod ? 21.5
+														
+														
+														Leaf Node 9: If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair <= 16.905 and Sensor2_mean > 446.105 and Sensor4_max ? 65.485 and comp2_repair_avg ? 73.335
+														
+														
+														Leaf Node10: If Comp_Timelapse_diff_errors ? 21.385 and Comp_Timelapse_diff_repair <= 16.905 and Sensor2_mean > 446.105 and Sensor4_max ? 65.485 and comp2_repair_avg > 73.335 and comp4_repair_avg ? 41.275

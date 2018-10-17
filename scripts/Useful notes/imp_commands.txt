@@ -1,0 +1,22 @@
+URL : http://172.16.0.247
+
+Username : 1998B42
+
+Password  : 162@&%625
+
+1) Jupyter notebook
+jupyter notebook --no-browser --port=22047 --ip=172.16.0.226
+
+hdfs dfs -copyFromLocal file1/file1.txt /user/username/dir2
+
+2)to show files inside directory
+!du -sh ../Hist/*
+
+3) To start flume 
+!flume-ng agent --conf conf -f flume-conf.properties -Dflume.root.logger=ERROR,console -n uberAgent
+
+4) To see files inside hdfs post flume
+!hdfs dfs -ls /user/pavanw/Uber/HistData
+
+5) to see first 10 rows in one file 
+!hdfs dfs -cat /user/pavanw/Uber/HistData/FlumeData.1532596914597 | head -10
